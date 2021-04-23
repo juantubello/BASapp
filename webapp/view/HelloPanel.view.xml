@@ -1,0 +1,11 @@
+<mvc:View controllerName="com.firstbassapp.firstapp.controller.HelloPanel"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Panel headerText="{i18n>panelText}" class="sapUiResponsiveMargin" width="auto">
+        <content>
+            <Button text="boton" press=".onShowHello" class="sapUiSmallMarginEnd" />
+            <Input value="{/recipient/name}" description="Hello {/recipient/name}" width="60%"/>
+            <Text text="Hello {/recipient/name}" class="sapUiSmallMargin myCustomText"/>
+        </content>
+    </Panel>
+</mvc:View>

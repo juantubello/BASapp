@@ -2,7 +2,7 @@ sap.ui.define(
   [
     "sap/ui/core/mvc/Controller",
     "sap/m/MessageToast",
-    "sap/ui/model/json/JSONModel"
+    "sap/ui/model/json/JSONModel",
   ],
   /**
    * @param {typeof sap.ui.core.mvc.Controller} Controller
@@ -11,12 +11,7 @@ sap.ui.define(
     "use strict";
 
     return Controller.extend("com.firstbassapp.firstapp.controller.View1", {
-      onInit: function () {
-      
-      },
-      onShowHello: function () {
-        MessageToast.show("Hello!");
-      },
+      onInit: function () {},
     });
   }
 );
