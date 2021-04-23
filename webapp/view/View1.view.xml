@@ -8,7 +8,13 @@
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-					<content />
+					<content>
+                    <Button text="boton" press=".onShowHello"></Button>
+                    <Input
+                     value="{/recipient/name}"
+                      description="Hello {/recipient/name}" 
+                      width="60%"></Input>
+                    </content>
 				</Page>
 			</pages>
 		</App>
