@@ -1,22 +1,21 @@
-<mvc:View
-    controllerName="com.firstbassapp.firstapp.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc"
-    displayBlock="true"
-    xmlns="sap.m"
->
-	<Shell id="shell">
-		<App id="app">
-			<pages>
-				<Page id="page" title="{i18n>title}">
-					<content>
-                    <Button text="boton" press=".onShowHello"></Button>
-                    <Input
-                     value="{/recipient/name}"
-                      description="Hello {/recipient/name}" 
-                      width="60%"></Input>
+<mvc:View controllerName="com.firstbassapp.firstapp.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Shell id="shell">
+        <App id="app" class="myCustomCss">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <Panel headerText="{i18n>panelText}" class="sapUiResponsiveMargin" width="auto">
+                            <content>
+                                <Button text="boton" press=".onShowHello" class="sapUiSmallMarginEnd" />
+                                <Input value="{/recipient/name}" description="Hello {/recipient/name}" width="60%"/>
+                                <Text text="Hello {/recipient/name}" class="sapUiSmallMargin myCustomText"/>
+                            </content>
+                        </Panel>
                     </content>
-				</Page>
-			</pages>
-		</App>
-	</Shell>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
 </mvc:View>
