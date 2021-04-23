@@ -12,6 +12,9 @@ sap.ui.define(
 
     return Controller.extend("com.firstbassapp.firstapp.controller.View1", {
       onInit: function () {},
+      onOpenHeader: function(){
+          this.getOwnerComponent().openHelloDialog();
+      }
     });
   }
 );

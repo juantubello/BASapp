@@ -13,21 +13,9 @@ sap.ui.define(
         onShowHello: function () {
           MessageToast.show("Hello!");
         },
-        onOpenDialog: function () {
-          let oView = this.getView();
-
-          if (!this.byId("helloDialog")) {
-            Fragment.load({
-              id: oView.getId(),
-              name: "com.firstbassapp.firstapp.view.HelloDialog",
-            }).then(function (oDialog) {
-              oView.addDependent(oDialog);
-              oDialog.open();
-            });
-          }else{
-              this.byId("helloDialog").open();
-          }
-        },
+        onOpenDialog: function(){
+            this.getOwnerComponent().openHelloDialog();
+        }
       }
     );
   }

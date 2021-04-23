@@ -5,6 +5,9 @@
         <App id="app" class="myCustomCss">
             <pages>
                 <Page id="page" title="{i18n>title}">
+                <headerContent>
+                <Button id="helloButtonDialog" icon="sap-icon://world" press=".onOpenHeader" class="sapUiSmallMarginEnd" />
+                </headerContent>
                     <content>
                         <mvc:XMLView viewName="com.firstbassapp.firstapp.view.HelloPanel"/>
                     </content>
