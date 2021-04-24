@@ -20,7 +20,7 @@
           "localUri": "localService/metadata.xml"
         }
       }
-		}
+    }
   },
   "sap.ui": {
     "technology": "UI5",
@@ -66,10 +66,14 @@
           "bundleName": "com.firstbassapp.firstapp.i18n.i18n"
         }
       },
-			"": {
-				"dataSource": "mainService",
-				"preload": true
-			}
+      "": {
+        "dataSource": "mainService",
+        "preload": true
+      },
+      "invoice": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "Invoices.json"
+      }
     },
     "resources": {
       "css": [
