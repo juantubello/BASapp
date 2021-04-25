@@ -6,9 +6,10 @@
     <List id="invoiceList" headerText="{i18n>invoiceListTitle}" class="sapUiResponsiveMargin" width="auto" 
           items="{ path: 'invoice>/Invoices',
                    sorter : {
-                             path:'ProductName'
+                             path:'ShipperName',
+                             group: true
                             }
-                }">
+                 }">
         <headerToolbar>
             <Toolbar>
                 <Title text="{i18n>invoiceListTitle}"/>
@@ -17,12 +18,15 @@
             </Toolbar>
         </headerToolbar>
         <items>
-            <ObjectListItem title="{invoice>Quantity} x {invoice>ProductName}" number="{
-                                    parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}],
+            <ObjectListItem title="{invoice>Quantity} x {invoice>ProductName}"
+                            number="{
+                                    parts: [ { path: 'invoice>ExtendedPrice' },
+                                             { path: 'view>/currency' } 
+                                           ],
                                     type: 'sap.ui.model.type.Currency',
                                     formatOptions: {
-                                        showMeasure: false
-                                    }
+                                                    showMeasure: false
+                                                    }
                             }" numberUnit="{view>/currency}" numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success'}">
                 <firstStatus>
                     <ObjectStatus text="{ path: 'invoice>Status', formatter: '.formatter.statusText' }"/>
