@@ -1,5 +1,6 @@
 sap.ui.define([
-	"comfirstbassapp./firstapp/test/unit/controller/View1.controller"
+    "firstbassapp/firstapp/test/unit/model/formatter",
+    "firstbassapp/firstapp/test/unit/controller/HelloPanel.controller"
 ], function () {
 	"use strict";
 });
