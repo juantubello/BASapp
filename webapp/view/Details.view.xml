@@ -1,0 +1,16 @@
+<mvc:View controllerName="com.firstbassapp.firstapp.controller.Details"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>detailsPageTitle}" showNavButton="true" navButtonPress=".onNavBack" >
+        <ObjectHeader title="{invoice>Quantity} x {invoice>ProductName}">
+            <attributes>
+                <ObjectAttribute text="{invoice>ProductName}"/>
+                <ObjectAttribute text="{invoice>Quantity}"/>
+                <ObjectAttribute text="{invoice>ExtendedPrice}"/>
+                <ObjectAttribute text="{invoice>ShipperName}"/>
+                <ObjectAttribute text="{invoice>ShippedDate}"/>
+                <ObjectAttribute text="{invoice>Status}"/>
+            </attributes>
+        </ObjectHeader>
+    </Page>
+</mvc:View>

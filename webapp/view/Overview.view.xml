@@ -1,0 +1,13 @@
+<mvc:View controllerName="com.firstbassapp.firstapp.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <headerContent>
+            <Button id="helloButtonDialog" icon="sap-icon://world" press=".onOpenHeader" class="sapUiSmallMarginEnd" />
+        </headerContent>
+        <content>
+            <mvc:XMLView viewName="com.firstbassapp.firstapp.view.HelloPanel"/>
+            <mvc:XMLView viewName="com.firstbassapp.firstapp.view.InvoiceList"/>
+        </content>
+    </Page>
+</mvc:View>
