@@ -1,6 +1,6 @@
 <mvc:View controllerName="com.firstbassapp.firstapp.controller.Details"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+    xmlns="sap.m" xmlns:customController="com.firstbassapp.firstapp.control">
     <Page id="page" title="{i18n>detailsPageTitle}" showNavButton="true" navButtonPress=".onNavBack" >
         <ObjectHeader title="{invoice>Quantity} x {invoice>ProductName}">
             <attributes>
@@ -12,5 +12,6 @@
                 <ObjectAttribute text="{invoice>Status}"/>
             </attributes>
         </ObjectHeader>
+        <customController:ProductRating id="rating" class="sapUiSmallMarginBeginEnd" change=".onRatingChange" />
     </Page>
 </mvc:View>
